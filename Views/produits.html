@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="css.css">
@@ -27,13 +25,6 @@ session_start();
 	<div id="produits">
 		<table align="center">
 		<form method="GET" action="panier.php">
-		<?php
-			$db = "abeille";
-			$user = "katia";
-			$mdp = "katia";
-
-			//$pdo = new mysqli("localhost",$user, $mdp, $db);
-		?>
 		<tr>
 			<th> <label for="nom">Nom</label> </th>
 			<th> <label for="type">Type</label>  </th>
@@ -56,30 +47,6 @@ session_start();
 		</tr>
 		</form>
 		</table>
-
-		<?php 
-			$pdo = new PDO("mysql:localhost; dbname:abeille", "root", "root");
-			if (isset($_GET["envoyer"])) {
-				$name = $_GET["nom"];
-				$type = $_GET["type"];
-				$prix = $_GET["prix"];
-				$histoire = $_GET["histoire"];
-				$photo = $_GET["photo"];
-
-				$sql = "INSERT INTO abeilles (nom, type, prix, histoire, photo) VALUES (\"$name\", \"$type\", $prix, \"$histoire\", $photo);";
-
-				if ($res) {
-					echo "<tr><td colspan=\"3\" style=\"text-align: center\">Nous souhaitons la bienvenue à votre abeille !!</td></tr>";
-				}
-				else{
-					echo "<tr><td colspan=\"3\" style=\"text-align: center\">Erreur : veuillez réessayer</td></tr>";
-				}
-
-			}
-			
-
-		?>
-
 	</div>
 	<footer>
 		<table class="footer" border="1" width="100%" cellspacing="0" cellpadding="0">
