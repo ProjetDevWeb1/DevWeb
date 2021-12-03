@@ -21,7 +21,7 @@ class BeesManager
         $con = mysqli_connect("localhost","root","root","teyabeille");
         $name =  $_REQUEST['nom'];
         $type = $_REQUEST['type'];
-        mysqli_query($con, "INSERT INTO abeille  VALUES ('$name', '$type')");
+        mysqli_query($con, "INSERT INTO abeille (nom,type) VALUES ('$name', '$type')");
         var_dump("CC");
         mysqli_close($con);
 
