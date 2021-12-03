@@ -17,7 +17,7 @@ class Router
 			}
 		}
 		else {
-			require_once 'views/index.php'; // renvoie acceuil todo
+			var_dump("erreur le reuf"); // renvoie acceuil todo
 		}
 	}
 }

@@ -9,8 +9,17 @@ class Bees
         {
             $model = new \BeesManager();
             $bees = $model->getBees();
-            render('index', ['bees' => $bees]);
+            render('read', ['bees' => $bees]);
             return;
+        }
+
+    }
+
+    public function create() {
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $model = new \BeesManager();
+            $bees = $model->create();
         }
     }
 }
+?>
