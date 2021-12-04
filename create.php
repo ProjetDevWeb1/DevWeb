@@ -10,6 +10,10 @@
                 <label for="content" class="form-label">Type</label>
                 <input type="text" id="type" name="type" rows="50"></textarea>
             </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Description</label>
+                <input type="text" id="description" name="description" rows="50"></textarea>
+            </div>
             <div class="col-auto">
                 <button type="submit" value="submit">Send</button>
             </div>

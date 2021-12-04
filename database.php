@@ -16,6 +16,7 @@ $sql = 'SELECT nom, type FROM abeille ORDER BY id';
   foreach ($conn->query($sql) as $row) {
     echo $row [ 'nom' ] . "\n";
     echo $row [ 'type' ] . "\t";
+    echo $row [ 'description' ] . "\t";
   }
 
 ?>
