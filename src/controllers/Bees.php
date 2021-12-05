@@ -21,5 +21,12 @@ class Bees
             $bees = $model->create();
         }
     }
+
+    public function delete(){
+        if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
+        $model = new \BeesManager();
+        $bees = $model->delete();
+        }
+    }
 }
 ?>

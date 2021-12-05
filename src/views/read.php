@@ -23,7 +23,7 @@
                         <tr>
                             <td><?= $bee['nom']?></td>
                             <td><?= $bee['type']?></td>
-                            <td><?= $bee['description']?></td>
+                            <td><?= $bee['Description']?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
