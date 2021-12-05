@@ -21,11 +21,18 @@ class BeesManager
         $con = mysqli_connect("localhost","root","root","teyabeille");
         $name =  $_REQUEST['nom'];
         $type = $_REQUEST['type'];
-        mysqli_query($con, "INSERT INTO abeille (nom, type) VALUES ('$name', '$type')");
-        var_dump("CC");
+        $description = $_REQUEST['description'];
+        mysqli_query($con, "INSERT INTO abeille (nom,type,description) VALUES ('$name', '$type','$description')");
         mysqli_close($con);
 
     }
+
+    public function delete($id) {
+        $con = mysqli_connect("localhost","root","root","teyabeille");
+        mysqli_query($con, "DELETE FROM abeille WHERE id = $id");
+        mysqli_close($con);
+    }
+
 }
 
 ?>

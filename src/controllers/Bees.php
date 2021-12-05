@@ -17,8 +17,17 @@ class Bees
 
     public function create() {
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $model = new \BeesManager();
+                $bees = $model->create();
+                header('Location: /DevWeb/index.php?route=post&action=read');
+        }
+    }
+
+    public function delete(int $id){
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $model = new \BeesManager();
-            $bees = $model->create();
+            $bees = $model->delete($id);
+            header('Location: /DevWeb/index.php?route=post&action=read');
         }
     }
 }
