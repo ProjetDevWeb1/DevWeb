@@ -17,6 +17,9 @@ class Router
          		elseif ('delete' === $action && isset($_GET['id'])) {
          			return $Bees->delete($_GET['id']);
          		}
+				elseif ('update' === $action && isset($_GET['id'])) {
+					return $Bees->update($_GET['id']);
+				}
 			}
 		}
 		else {

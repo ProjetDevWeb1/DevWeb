@@ -2,12 +2,12 @@
     <div class="col-12">
         <form action="index.php?route=post&action=create" method="post">
             <div class="mb-3">
-                <label for="title" class="form-label">nom</label>
+                <label for="nom" class="form-label">nom</label>
                 <input type="text" name="nom" class="form-control" id="nom">
             </div>
 
             <div class="mb-3">
-                <label for="content" class="form-label">Type</label>
+                <label for="type" class="form-label">Type</label>
                 <select name="type" id="type">
                     <option value="">--Choisissez un type--</option>
                     <option value="reine">Reine</option>
@@ -17,7 +17,7 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="content" class="form-label">Description</label>
+                <label for="description" class="form-label">Description</label>
                 <input type="text" id="description" name="description" rows="50"></textarea>
             </div>
             <div class="col-auto">
