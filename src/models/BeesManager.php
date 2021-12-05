@@ -34,11 +34,10 @@ class BeesManager
     }
 
     public function update($id) {
-        var_dump("wesh");
         $con = mysqli_connect("localhost","root","root","teyabeille");
         $newName =  $_REQUEST['newName'];
         $newDescription = $_REQUEST['newDesc'];
-        $$newType = $_REQUEST['newType'];
+        $newType = $_REQUEST['newType'];
         mysqli_query($con, "UPDATE abeille SET nom='$newName', type='$newType', description='$newDescription' WHERE id=$id");
         mysqli_close($con);
     }
