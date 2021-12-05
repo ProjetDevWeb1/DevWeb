@@ -18,10 +18,6 @@ class BeesManager
     }
 
     public function create() {
-        foreach($_POST as $key=>$value)
-        {
-            echo "$key=$value";
-        }  
         $con = mysqli_connect("localhost","root","root","teyabeille");
         $name =  $_REQUEST['nom'];
         $type = $_REQUEST['type'];
