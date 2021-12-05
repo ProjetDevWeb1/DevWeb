@@ -27,6 +27,14 @@ class BeesManager
         mysqli_close($con);
 
     }
+
+    public function delete() {
+        $con = mysqli_connect("localhost","root","","teyabeille");
+        mysqli_query($con, "DELETE FROM abeille WHERE id = $_POST");
+        var_dump("CC");
+        mysqli_close($con);
+    }
+
 }
 
 ?>

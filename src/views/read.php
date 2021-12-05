@@ -14,6 +14,7 @@
                     <tr>
                     <th scope="col">Nom</th>
                     <th scope="col">type</th>
+                    <th scope="col">Description</th>
                     </tr>
                 </thead>
 
@@ -22,6 +23,7 @@
                         <tr>
                             <td><?= $bee['nom']?></td>
                             <td><?= $bee['type']?></td>
+                            <td><?= $bee['description']?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
