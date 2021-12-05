@@ -28,7 +28,6 @@ class BeesManager
     }
 
     public function delete($id) {
-        var_dump($id);
         $con = mysqli_connect("localhost","root","root","teyabeille");
         mysqli_query($con, "DELETE FROM abeille WHERE id = $id");
         mysqli_close($con);
