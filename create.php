@@ -8,7 +8,13 @@
 
             <div class="mb-3">
                 <label for="content" class="form-label">Type</label>
-                <input type="text" id="type" name="type" rows="50"></textarea>
+                <select name="type" id="type">
+                    <option value="">--Choisissez un type--</option>
+                    <option value="reine">Reine</option>
+                    <option value="charpentiere">Charpentière</option>
+                    <option value="gardienne">Gardienne</option>
+                    <option value="butineuse">Butineuse</option>
+                </select>
             </div>
             <div class="mb-3">
                 <label for="content" class="form-label">Description</label>

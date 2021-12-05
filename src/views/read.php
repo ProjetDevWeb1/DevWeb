@@ -24,10 +24,13 @@
                             <td><?= $bee['nom']?></td>
                             <td><?= $bee['type']?></td>
                             <td><?= $bee['Description']?></td>
+                            <td> <button><a href='/DevWeb/index.php?route=post&action=delete&id=<?= $bee['id']?>' alt='Broken Link'>Delete</a></button> </td>
+                            <td> <button><a href='/DevWeb/index.php?route=post&action=update&id=<?= $bee['id']?>' alt='Broken Link'>Update</a></button> </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <td> <button><a href='/DevWeb/create.php' alt='Broken Link'>Create</a></button> </td>
         </br>
 
 
