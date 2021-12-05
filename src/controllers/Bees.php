@@ -17,15 +17,15 @@ class Bees
 
     public function create() {
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $model = new \BeesManager();
-            $bees = $model->create();
+                $model = new \BeesManager();
+                $bees = $model->create();
         }
     }
 
-    public function delete(){
-        if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
-        $model = new \BeesManager();
-        $bees = $model->delete();
+    public function delete(int $id){
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $model = new \BeesManager();
+            $bees = $model->delete($id);
         }
     }
 }
