@@ -1,39 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 
-    <head>
-        <title>Liste abeilles</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    </head>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/Devweb/src/views/css/Acceuil.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+  <title>Adopte1Abeille</title>
+</head>
 
-    <body>
-        <div class = "container">
-            <h1> Liste des abeilles : </h1>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">type</th>
-                    <th scope="col">Description</th>
-                    </tr>
-                </thead>
-
+<body>
+  <header>
+    <div class="logo1">
+      <img src="/Devweb/src/views/css/bannieres/logo.png" alt="logo" />
+      <h2 class="logo"> <a href='/DevWeb/index.php' alt='Broken Link'> Adopte1Abeille </a> </h2>
+    </div>
+  </header>
+  <div class="gif">
+            <img src="/Devweb/src/views/css/bannieres/gif.gif" alt="gif abeille" />
+            </div>
+  <div id="produits">
+    <section class="presentation">
+      <div class="introduction">
+        <div class="intro-text">
+            <pre> Liste des abeilles : </pre>
+          </div>
+            <table class="table">
                 <tbody>
                     <?php foreach($bees  as $bee) :?>
                         <tr>
                             <td><?= $bee['nom']?></td>
                             <td><?= $bee['type']?></td>
-                            <td><?= $bee['description']?></td>
-                            <td> <button><a href='/DevWeb/index.php?route=post&action=delete&id=<?= $bee['id']?>' alt='Broken Link'>Delete</a></button> </td>
-                            <td> <button><a href='/DevWeb/update.php?id=<?= $bee['id']?>' alt='Broken Link'>Update</a></button> </td>
+                            <td><?= $bee['Description']?></td>
+                            <td> <button type="button" class="btn btn-outline-warning"><a href='/DevWeb/index.php?route=post&action=delete&id=<?= $bee['id']?>' alt='Broken Link'>Delete</a></button> </td>
+                            <td> <button type="button" class="btn btn-outline-warning"><a href='/DevWeb/index.php?route=post&action=getUpdate&id=<?= $bee['id']?>' alt='Broken Link'>Update</a></button> </td>
+                          </div>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
-            <td> <button><a href='/DevWeb/create.php' alt='Broken Link'>Create</a></button> </td>
+            <button type="button" class="btn btn-warning btn-lg btn-block"><a href='/DevWeb/src/views/create.php' alt='Broken Link'>Create</a></button>
         </br>
-
-
-    </body>
-
+        </section>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="info">
+          <ul>
+            <li>
+              <h1>Contact </h1>
+              <ul>
+                <li>Mail : contact@glc.com</li>
+                <li>Service client : +33(0)778404167</li>
+                <li>37 Rue Rouget De Lisle, 92310 Issy-les-Moulineaux</li>
+              </ul>
+            </li>
+          </ul>
+          <br>
+          <h6>© Teyabeille</h6>
+        </div>
+    </footer>
+</body>
 </html>

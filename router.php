@@ -13,17 +13,20 @@ class Router
                     return $Bees->create(); }
                 elseif ('read' === $action) {
                   	return $Bees->getAll();
-         		}
-         		elseif ('delete' === $action && isset($_GET['id'])) {
-         			return $Bees->delete($_GET['id']);
-         		}
-				elseif ('update' === $action && isset($_GET['id'])) {
-					return $Bees->update($_GET['id']);
-				}
-			}
-		}
+         					}
+         				elseif ('delete' === $action && isset($_GET['id'])) {
+         						return $Bees->delete($_GET['id']);
+         					}
+								elseif ('update' === $action && isset($_GET['id'])) {
+										return $Bees->update($_GET['id']);
+									}
+								elseif ('getUpdate' === $action && isset($_GET['id'])) {
+										return $Bees->getUpdate($_GET['id']);
+									}
+								}
+							}
 		else {
-			var_dump("erreur le reuf"); // renvoie acceuil todo
+			require_once("src/views/main.php");
 		}
 	}
 }

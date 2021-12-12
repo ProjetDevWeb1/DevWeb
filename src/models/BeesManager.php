@@ -33,6 +33,12 @@ class BeesManager
         mysqli_close($con);
     }
 
+    public function getUpdate($id) {
+      $con = mysqli_connect("localhost","root","root","teyabeille");
+      $req = mysqli_query($con, "SELECT * FROM abeille WHERE id = $id");
+      return mysqli_fetch_array($req);
+
+    }
     public function update($id) {
         $con = mysqli_connect("localhost","root","root","teyabeille");
         $newName =  $_REQUEST['newName'];

@@ -11,4 +11,5 @@ function render($view, array $data = [])
     require_once("src/views/$view.php");
 
 }
+
  ?>
