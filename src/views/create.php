@@ -17,30 +17,33 @@
   </header>
   <main>
 	<div id="produits">
-		<form action="/DevWeb/index.php?route=post&action=create" method="post">
-            <div class="mb-3">
-                <label for="nom" class="form-label">Nom</label>
-                <input type="text" name="nom" class="form-control" id="nom">
-            </div>
+      <form action="/DevWeb/index.php?route=post&action=create" method="post">
+            <div class="style_form">
+              <div class="mb-3">
+                  <label for="nom" class="form-label">Nom</label>
+                  <input type="text" name="nom" class="form-control" id="nom">
+              </div>
 
-            <div class="mb-3">
-                <label for="type" class="form-label">Type</label>
-                <select name="type" id="type">
-                    <option value="">--Choisissez un type--</option>
-                    <option value="reine">Reine</option>
-                    <option value="charpentiere">Charpentière</option>
-                    <option value="gardienne">Gardienne</option>
-                    <option value="butineuse">Butineuse</option>
-                </select>
+              <div class="mb-4">
+                  <label for="type" class="form-label">Type</label>
+                  <select name="type" id="type">
+                      <option value="">--Choisissez un type--</option>
+                      <option value="reine">Reine</option>
+                      <option value="charpentiere">Charpentière</option>
+                      <option value="gardienne">Gardienne</option>
+                      <option value="butineuse">Butineuse</option>
+                  </select>
+              </div>
+              <div class="mb-5">
+                  <label for="description" class="form-label">Description</label>
+                  <textarea type="text" id="description" name="description" rows="5" cols="100"></textarea>
+              </div>
+              <div class="col-auto">
+                  <button type="submit" value="submit">Send</button>
+              </div>
             </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea type="text" id="description" name="description" rows="5" cols="100"></textarea>
-            </div>
-            <div class="col-auto">
-                <button type="submit" value="submit">Send</button>
-            </div>
-        </form>
+      </form>
+       
 	</div>
 </main>
 	<footer>

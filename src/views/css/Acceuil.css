@@ -243,10 +243,51 @@ table{
   align-content: left;
 }
 
+.style_form{
+
+}
+
+.style_form input{
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-color: #ffcc00;
+}
+
+.style_form select{
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-color: #ffcc00;
+
+}
+
+.style_form textarea{
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-color: #ffcc00;
+
+}
+
+.style_form label{
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  border-color: #ffcc00;
+}
+
+.style_form button{
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-color: #ffcc00;
+}
+
 /*Footer*/
 .footer {
   margin-top: 0px;
-  display: flex;
+  display: flex;  
   background-color: #ffcc00;
   overflow: hidden;
   align-items: center;

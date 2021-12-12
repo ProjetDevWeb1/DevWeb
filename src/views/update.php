@@ -19,7 +19,8 @@
 <div class="row">
     <div class="col-12">
         <form action="index.php?route=post&action=update&id=<?= $_REQUEST['id']?>" method="post">
-            <div class="mb-3">
+        <div class="style_form">   
+          <div class="mb-3">
                 <label for="newName" class="form-label">Nouveau nom</label>
                 <input type="text" name="newName" class="form-control" id="newName" value='<?= $bee["nom"] ?>'>
             </div>
@@ -41,6 +42,7 @@
             <div class="col-auto">
                 <button type="submit" value="submit">Valider les changements</button>
             </div>
+          </div>
         </form>
     </div>
 </div>
