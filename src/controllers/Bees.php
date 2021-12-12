@@ -31,6 +31,14 @@ class Bees
         }
     }
 
+    public function getUpdate(int $id) {
+      if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        $model = new \BeesManager();
+        $bee = $model->getUpdate($id);
+        render('update', ['bee' => $bee]);
+      }
+    }
+
     public function update(int $id){
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $model = new \BeesManager();

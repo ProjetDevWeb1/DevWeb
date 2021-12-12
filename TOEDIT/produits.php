@@ -24,22 +24,30 @@
 	</header>
 	<div id="produits">
 		<table align="center">
-		<form method="GET" action="panier.php">
+		<form action="index.php?route=post&action=create" method="post">
 		<tr>
 			<th> <label for="nom">Nom</label> </th>
-			<th> <label for="type">Type</label>  </th>
+			<th> <label for="type">Type</label>
+            </th>
 			<th> <label for="prix">Prix à l'achat</label> </th>
 		</tr>
 		<tr>
 			<td style="text-align: center"><input type="text" name="nom" id="nom"></td>
-			<td style="text-align: center"><input type="text" name="type" id="type"></td>
+			<td style="text-align: center"> <select name="type" id="type">
+                    <option value="">--Choisissez un type--</option>
+                    <option value="reine">Reine</option>
+                    <option value="charpentiere">Charpentière</option>
+                    <option value="gardienne">Gardienne</option>
+                    <option value="butineuse">Butineuse</option>
+                </select> </td>
 			<td style="text-align: center"><input type="int" name="prix" id="prix"></td>
 		</tr>
 		<tr>
-			<th colspan="3"> <label for="histoire">La petite histoire...</label> </th>
+			<th colspan="3"> <label for="description" class="form-label">La petite histoire...</label>
+            </th>
 		</tr>
 		<tr>
-			<td colspan="3"> <textarea name="histoire" id="histoire" cols="80" rows="10"> </textarea> </td>
+			<td colspan="3"> <textarea type="text" id="description" name="description" rows="10" cols="70"></textarea> </td>
 		</tr>
 		<tr>
 			<td colspan="3" style="text-align: center"> <input type="button" name="Envoyer" id="envoyer" value="Envoyer"> </td>

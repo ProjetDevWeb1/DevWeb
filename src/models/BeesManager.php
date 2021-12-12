@@ -5,7 +5,7 @@ class BeesManager
 
     public function getBees()
     {
-        $con = mysqli_connect("localhost","root","root","teyabeille");
+        $con = mysqli_connect("localhost","root","","teyabeille");
         $req = mysqli_query($con, "SELECT * FROM abeille ORDER BY 2");
 
         $resultArray = [];
@@ -18,7 +18,7 @@ class BeesManager
     }
 
     public function create() {
-        $con = mysqli_connect("localhost","root","root","teyabeille");
+        $con = mysqli_connect("localhost","root","","teyabeille");
         $name =  $_REQUEST['nom'];
         $type = $_REQUEST['type'];
         $description = $_REQUEST['description'];
@@ -28,13 +28,19 @@ class BeesManager
     }
 
     public function delete($id) {
-        $con = mysqli_connect("localhost","root","root","teyabeille");
+        $con = mysqli_connect("localhost","root","","teyabeille");
         mysqli_query($con, "DELETE FROM abeille WHERE id = $id");
         mysqli_close($con);
     }
 
+    public function getUpdate($id) {
+      $con = mysqli_connect("localhost","root","","teyabeille");
+      $req = mysqli_query($con, "SELECT * FROM abeille WHERE id = $id");
+      return mysqli_fetch_array($req);
+
+    }
     public function update($id) {
-        $con = mysqli_connect("localhost","root","root","teyabeille");
+        $con = mysqli_connect("localhost","root","","teyabeille");
         $newName =  $_REQUEST['newName'];
         $newDescription = $_REQUEST['newDesc'];
         $newType = $_REQUEST['newType'];
