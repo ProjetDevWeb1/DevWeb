@@ -1,0 +1,57 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Dec 12, 2021 at 04:58 PM
+-- Server version: 5.7.32
+-- PHP Version: 8.0.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `teyabeille`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abeille`
+--
+
+CREATE TABLE `abeille` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `type` enum('reine','charpentiere','gardienne','butineuse') NOT NULL,
+  `Description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `abeille`
+--
+
+INSERT INTO `abeille` (`id`, `nom`, `type`, `Description`) VALUES
+(28, 'Vincent', 'reine', 'Aliquam nec euismod orci. Nullam molestie in quam nec consectetur. Vivamus quam metus, cursus nec ligula eu, ornare tristique ante. Sed scelerisque tortor eros, eu laoreet nisi blandit at. Cras ornare, lorem non sollicitudin faucibus, urna enim eleifend quam, ac fringilla ligula ex efficitur orci. Donec mauris tortor, blandit sed varius tincidunt, fringilla at nisi. Maecenas rutrum et turpis eget interdum. Phasellus quis ante nisl. Sed auctor nisi diam, in varius felis faucibus ut.'),
+(29, 'Teyabeille', 'gardienne', 'Ut sollicitudin vulputate nulla, vitae congue magna efficitur id. Vestibulum tempus sapien et pellentesque tempus. Integer ut erat sapien. Nunc dictum lorem magna, malesuada auctor mauris euismod quis. Mauris consequat faucibus metus, quis posuere leo blandit hendrerit. In hac habitasse platea dictumst. Fusce sit amet dignissim lectus, non facilisis purus. Etiam blandit velit eu erat lacinia aliquam. Aenean volutpat mauris id tristique dictum.'),
+(31, 'Katia', 'charpentiere', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis turpis odio. Cras facilisis aliquam dapibus. Morbi eu nisl velit. Maecenas nec elit mauris. Suspendisse enim est, tristique nec luctus a, sagittis vel ipsum. Cras consequat eu neque vitae cursus. Proin enim justo, euismod sagittis mi vel, aliquam semper magna. Suspendisse viverra mi arcu, in facilisis neque cursus nec. Praesent pharetra imperdiet nunc, id euismod tortor fermentum ac.');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `abeille`
+--
+ALTER TABLE `abeille`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `abeille`
+--
+ALTER TABLE `abeille`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;

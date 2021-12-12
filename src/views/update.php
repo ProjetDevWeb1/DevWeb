@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/Devweb/src/views/css/Acceuil.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
   <title> Adopte1Abeille</title>
 </head>
 
@@ -21,26 +22,28 @@
         <form action="index.php?route=post&action=update&id=<?= $_REQUEST['id']?>" method="post">
         <div class="style_form">   
           <div class="mb-3">
-                <label for="newName" class="form-label">Nouveau nom</label>
+                <label for="newName" class="form-label">Nom</label>
                 <input type="text" name="newName" class="form-control" id="newName" value='<?= $bee["nom"] ?>'>
             </div>
 
             <div class="mb-3">
-                <label for="newType" class="form-label">Nouveau type</label>
+                <label for="newType" class="form-label">Type</label>
                 <select name="newType" id="newType">
+                  <optgroup>
                     <option value="">--Choisissez un type--</option>
                     <option value="reine" <?= ($bee["type"] == "reine") ? "selected" : "" ?>>Reine</option>
                     <option value="charpentiere" <?= ($bee["type"] == "charpentiere") ? "selected" : ""?>>Charpentière</option>
                     <option value="gardienne" <?= ($bee["type"] == "gardienne") ? "selected" : ""?>>Gardienne</option>
                     <option value="butineuse" <?= ($bee["type"] == "butineuse") ? "selected" : ""?>>Butineuse</option>
+                    </optgroup>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="newDesc" class="form-label">Nouvelle description</label>
+                <label for="newDesc" class="form-label">Description</label>
                 <textarea type="text" id="newDesc" name="newDesc" rows="5" cols="100" style="resize:none"><?= $bee["Description"] ?></textarea>
             </div>
             <div class="col-auto">
-                <button type="submit" value="submit">Valider les changements</button>
+                <button type="submit" value="submit" class="btn btn-outline-warning">Update</button>
             </div>
           </div>
         </form>

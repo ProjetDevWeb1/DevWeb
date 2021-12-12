@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/Devweb/src/views/css/Acceuil.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
   <title> Adopte1Abeille</title>
 </head>
 
@@ -27,11 +28,13 @@
               <div class="mb-4">
                   <label for="type" class="form-label">Type</label>
                   <select name="type" id="type">
+                  	<optgroup>
                       <option value="">--Choisissez un type--</option>
                       <option value="reine">Reine</option>
                       <option value="charpentiere">Charpentière</option>
                       <option value="gardienne">Gardienne</option>
                       <option value="butineuse">Butineuse</option>
+                      </optgroup>
                   </select>
               </div>
               <div class="mb-5">
@@ -39,7 +42,7 @@
                   <textarea type="text" id="description" name="description" rows="5" cols="100"></textarea>
               </div>
               <div class="col-auto">
-                  <button type="submit" value="submit">Send</button>
+                  <button type="submit" value="submit" class="btn btn-outline-warning">Create</button>
               </div>
             </div>
       </form>
