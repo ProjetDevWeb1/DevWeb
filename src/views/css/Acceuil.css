@@ -249,7 +249,6 @@ table{
 
 .style_form input{
   display: flex;
-  margin-bottom: 20px;
   margin: 0 auto;
   border-color: #ffcc00;
 }
@@ -271,9 +270,13 @@ table{
 }
 
 .style_form label{
+  text-align: center;
   display: flex;
   margin-bottom: 20px;
   border-color: #ffcc00;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
 }
 
 .style_form button{
